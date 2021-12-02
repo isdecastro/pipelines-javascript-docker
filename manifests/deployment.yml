@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: isdecastropipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: isdecastropipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: isdecastropipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: isdecastropipelinesjavascriptdocker 
+          image: aimsplusacr.azurecr.io/isdecastropipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
